@@ -1,1 +1,0 @@
-The Super Gamepad Zero is a SNES controller with a Raspberry Pi Zero W instide. Originally made by howchoo, it was and still is very cool. I put a Raspberry Pi Zero 2 W inside for extra performance. The Gamepad Zero allows you to play games from many different retro consoles.
