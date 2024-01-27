@@ -1,0 +1,1 @@
+Download the bat file or folder using the method on saadit111.github.io and run the .bat file. It will close after some time, and you should have a .txt file with your system informaton
