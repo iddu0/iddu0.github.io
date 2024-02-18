@@ -1,0 +1,1 @@
+This "Chromebook" is very PRO. It has 8 gigabytes of RAM, and a 128 gigabyte SSD. It also has a Intel Core 2 Duo U9400. As you can see this is very PRO. 
