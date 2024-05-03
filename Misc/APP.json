@@ -1,8 +1,12 @@
 {
   "name": "AIO-SPCT-TEST",
-  "description": "An All in One School PC tool!",
-  "icon": "https://iddu0.github.io/icons/staticfavicon.ico",
-  "url": "https://iddu0.github.io",
-  "encodedUrl": false,
-  "author": "iddu01"
+  "desc": "An test app",
+  "longDesc": "TEST"
+  "url": "iddu0.github.io",
+  "encodedUrl": "no",
+  "icon": "https://redstone-nw.netlify.app/assets/icon.png",
+  "author": "iddu0",
+  "version": "v0.1",
+  "finderTerms": ["term","cool","epic"],
+  "permissions": []
 }
