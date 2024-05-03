@@ -8,5 +8,5 @@
   "author": "iddu0",
   "version": "v0.1",
   "finderTerms": ["term","cool","epic"],
-  "permissions": []
+  "permissions": [allow installApp()]
 }
