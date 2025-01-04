@@ -1,0 +1,12 @@
+{
+  "name": "Project-SPCT-Test",
+  "desc": "A test app",
+  "longDesc": "A looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong description for my example app. With [b]BBCode![/b]"
+  "url": "project-spct.github.io",
+  "encodedUrl": "no",
+  "icon": "https://redstone-nw.netlify.app/assets/icon.png",
+  "author": "iddu01",
+  "version": "v1.0.0",
+  "finderTerms": ["term","cool","epic"],
+  "permissions": [allow installApp()]
+}
