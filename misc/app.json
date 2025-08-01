@@ -7,6 +7,5 @@
   "icon": "https://redstone-nw.netlify.app/assets/icon.png",
   "author": "iddu01",
   "version": "v1.0.0",
-  "finderTerms": ["term", "cool", "epic"],
-  "permissions": ["allow installApp()"]
+  "finderTerms": ["term", "cool", "epic"]
 }
