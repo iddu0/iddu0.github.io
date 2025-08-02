@@ -1,8 +1,8 @@
 {
-  "name": "Project-SPCT-Test",
+  "name": "Test",
   "desc": "A test app",
   "longDesc": "A looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong description for my example app. With [b]BBCode![/b]",
-  "url": "https://project-spct.github.io",
+  "url": "https://clockwork-store-xi.vercel.app",
   "encodedUrl": "no",
   "icon": "https://redstone-nw.netlify.app/assets/icon.png",
   "author": "iddu01",
@@ -10,3 +10,4 @@
   "finderTerms": ["term", "cool", "epic"],
   "permissions": ["installApp"]
 }
+
