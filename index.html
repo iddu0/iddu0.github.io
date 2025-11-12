@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iddu01's website</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+  }
+
+  .iframe-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  iframe {
+    border: none;
+    transform-origin: center center;
+  }
+</style>
+</head>
+<body>
+
+<div class="iframe-container">
+  <iframe 
+    id="macFrame"
+    src="https://infinitemac.org/embed?disk=System+1.0&infinite_hd=true&machine=Mac+128K&screen_scale=1&auto_pause=true"
+    allow="cross-origin-isolated">
+  </iframe>
+</div>
+
+<script>
+  const iframe = document.getElementById('macFrame');
+  const baseWidth = 512;
+  const baseHeight = 342;
+
+  function resizeIframe() {
+    const scale = Math.min(window.innerWidth / baseWidth, window.innerHeight / baseHeight);
+    iframe.style.transform = `scale(${scale})`;
+    iframe.width = baseWidth;
+    iframe.height = baseHeight;
+  }
+
+  window.addEventListener('resize', resizeIframe);
+  resizeIframe();
+</script>
+
+</body>
+</html>
