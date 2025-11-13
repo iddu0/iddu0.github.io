@@ -37,15 +37,16 @@
 <div class="iframe-container">
   <iframe 
     id="macFrame"
-    src="https://infinitemac.org/embed?disk=System+1.0&infinite_hd=true&machine=Mac+128K&screen_scale=1&auto_pause=true"
-    allow="cross-origin-isolated">
+    src="https://infinitemac.org/embed?infinite_hd=true&cdrom=https%3A%2F%2Farchive.org%2Fdownload%2FidduMacOS8%2FidduMacOS8.img&machine=Quadra+650"
+    allow="cross-origin-isolated"
+    frameborder="0">
   </iframe>
 </div>
 
 <script>
   const iframe = document.getElementById('macFrame');
-  const baseWidth = 512;
-  const baseHeight = 342;
+  const baseWidth = 640;
+  const baseHeight = 480;
 
   function resizeIframe() {
     const paddingX = 60 * 2;
