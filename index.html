@@ -1,84 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iddu01's website</title>
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: black;
-    color: white;
-    font-family: sans-serif;
-    overflow: hidden;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iddu01's website</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: black;
+            font-family: 'Chicago', 'Charcoal', sans-serif;
+            overflow: hidden;
+            color: white;
+        }
 
-  .iframe-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 640px;
-    height: 480px;
-    transform: translate(-50%, -50%);
-  }
+        /* Left Sidebar */
+        .sidebar-left {
+            position: fixed;
+            top: 50%;
+            left: 40px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            z-index: 10;
+        }
 
-  iframe {
-    width: 100%;
-    height: 100%;
-    border: 4px solid black;
-    transform-origin: center center;
-    display: block;
-  }
 
-  .text-above, .text-below {
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    z-index: 10;
-    text-shadow: 0 0 5px black;
-  }
+        .sidebar-left button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            /* FULLY BIG */
+            height: 140px;
+            /* FULLY BIG */
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            transition: transform 0.2s;
+        }
 
-  .text-above { top: 20px; }
-  .text-below { bottom: 20px; }
-</style>
+        .sidebar-left button:hover {
+            transform: scale(1.05);
+        }
+
+        .sidebar-left button img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Center Iframe */
+        .iframe-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 640px;
+            height: 480px;
+            transform: translate(-50%, -50%);
+            border: 4px solid black;
+            z-index: 5;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transform-origin: center center;
+        }
+
+        /* Text above/below */
+        .text-above,
+        .text-below {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 0 0 5px black;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .text-above {
+            top: 20px;
+        }
+
+        .text-below {
+            bottom: 20px;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="text-above">This site may take a while to load on slow internet.</div>
+    <div class="sidebar-left">
+        <button onclick="alert('Home clicked')">
+            <img src="icons/homepage/HomeLogo.png" alt="Home">
+        </button>
+        <button onclick="alert('Blog clicked')">
+            <img src="icons/homepage/BlogLogo.png" alt="Blog">
+        </button>
+        <button onclick="alert('Links clicked')">
+            <img src="icons/homepage/LinksLogo.png" alt="Links">
+        </button>
+    </div>
 
-<div class="iframe-container">
-  <iframe 
-    id="macFrame"
-    src="https://infinitemac.org/embed?infinite_hd=true&cdrom=https%3A%2F%2Farchive.org%2Fdownload%2FidduMacOS8%2FidduMacOS8.img&machine=Quadra+650"
-    allow="cross-origin-isolated"
-    frameborder="0">
-  </iframe>
-</div>
+    <div class="text-above">This site may take a while to load on slow internet.</div>
 
-<div class="text-below">Click <a href="https://old.id0.qzz.io">here</a> for a plain HTML version</div>
+    <div class="iframe-container">
+        <iframe id="macFrame"
+            src="https://infinitemac.org/embed?infinite_hd=true&cdrom=https%3A%2F%2Farchive.org%2Fdownload%2FidduMacOS8%2FidduMacOS8.img&machine=Quadra+650"
+            allow="cross-origin-isolated" frameborder="0">
+        </iframe>
+    </div>
 
-<script>
-  const iframe = document.getElementById('macFrame');
-  const baseWidth = 640;
-  const baseHeight = 480;
+    <div class="text-below">Click <a href="https://old.id0.qzz.io">here</a> for a plain HTML version</div>
 
-  function resizeIframe() {
-    const scale = Math.min(
-      window.innerWidth / baseWidth,
-      window.innerHeight / baseHeight
-    );
-    iframe.style.transform = `scale(${scale})`;
-  }
+    <script>
+        const iframe = document.getElementById('macFrame');
+        const baseWidth = 640;
+        const baseHeight = 480;
 
-  window.addEventListener('resize', resizeIframe);
-  resizeIframe();
-</script>
+        function resizeIframe() {
+            const scale = Math.min(
+                window.innerWidth / (baseWidth + 250), // leave space for bigger sidebar
+                window.innerHeight / baseHeight
+            );
+            iframe.style.transform = `scale(${scale})`;
+        }
+
+        window.addEventListener('resize', resizeIframe);
+        resizeIframe();
+    </script>
 
 </body>
+
 </html>
