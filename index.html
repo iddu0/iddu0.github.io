@@ -29,15 +29,12 @@
             z-index: 10;
         }
 
-
         .sidebar-left button {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 200px;
-            /* FULLY BIG */
             height: 140px;
-            /* FULLY BIG */
             background-color: transparent;
             border: none;
             cursor: pointer;
@@ -74,7 +71,7 @@
             transform-origin: center center;
         }
 
-        /* Text above/below */
+        /* Center Top/Bottom Text */
         .text-above,
         .text-below {
             position: fixed;
@@ -94,11 +91,33 @@
         .text-below {
             bottom: 20px;
         }
+
+        /* RIGHT SIDE TEXT */
+        .text-above-right,
+        .text-below-right {
+            position: fixed;
+            right: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 0 0 5px black;
+            z-index: 10;
+            text-align: right;
+            color: white;
+        }
+
+        .text-above-right {
+            top: 20px;
+        }
+
+        .text-below-right {
+            bottom: 20px;
+        }
     </style>
 </head>
 
 <body>
 
+    <!-- LEFT BUTTONS -->
     <div class="sidebar-left">
         <button onclick="window.location.href='https://iddu0.github.io'">
             <img src="icons/homepage/HomeLogo.png" alt="Home">
@@ -111,16 +130,23 @@
         </button>
     </div>
 
-    <div class="text-above">This site may take a while to load on slow internet.</div>
+    <!-- CENTER TEXT -->
+    <div class="text-above"></div>
+    <div class="text-below"></div>
 
+    <!-- RIGHT-SIDE TEXT -->
+    <div class="text-above-right">To use this website, when the<br> Mac Emulator starts, click OK. From<br> there, you
+        can use this Mac to learn<br> about me, and just play around!.<br><br>This site may take a while<br> to load for
+        the first time.</div>
+    <div class="text-below-right">Click <a href="links/">here</a> for a plain HTML version</div>
+
+    <!-- MAC EMBED -->
     <div class="iframe-container">
         <iframe id="macFrame"
             src="https://infinitemac.org/embed?infinite_hd=true&cdrom=https%3A%2F%2Farchive.org%2Fdownload%2FidduMacOS8%2FidduMacOS8.img&machine=Quadra+650"
-            allow="cross-origin-isolated" frameborder="0">
+            allow="cross-origin-isolated">
         </iframe>
     </div>
-
-    <div class="text-below">Click <a href="links/">here</a> for a plain HTML version</div>
 
     <script>
         const iframe = document.getElementById('macFrame');
@@ -129,7 +155,7 @@
 
         function resizeIframe() {
             const scale = Math.min(
-                window.innerWidth / (baseWidth + 250), // leave space for bigger sidebar
+                window.innerWidth / (baseWidth + 250),
                 window.innerHeight / baseHeight
             );
             iframe.style.transform = `scale(${scale})`;
